@@ -1,0 +1,8 @@
+<% @@rolodex.contacts.each do |contact| %>
+
+<h1><%= contact.first_name %> <%= contact.last_name %> </h1>
+<p><h3>Email:</h3> <%= @contact.email %></p>
+<p><h3>Note:</h3></p>
+<p><%= @contact.note %></p>
+
+<% end %>

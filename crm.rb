@@ -4,6 +4,7 @@ require 'sinatra'
 
 # Initiates the rolodex class
 @@rolodex = Rolodex.new
+@@rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
 
 get '/' do
 	@crm_app_name = "My CRM"
@@ -24,3 +25,9 @@ post '/contacts' do
 	puts params
 	redirect to('/contacts')
 end
+
+get "/contacts/1000" do
+  @contact = @@rolodex.find(1000)
+  erb :show_contact
+end
+
