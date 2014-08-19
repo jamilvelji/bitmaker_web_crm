@@ -38,12 +38,15 @@ section ul {
 	margin: 0;
 }
 
-section li {
-	display: inline;
-	padding: 0 5px;
-	margin: 0;
+section .contact-display {
+	padding: 5px;
 }
 
 section li button {
+	padding: 0 8px;
+	margin: 10px 5px;
+}
+
+section button {
 	margin-left: 10px;
 }

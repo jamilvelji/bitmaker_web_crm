@@ -1,9 +1,15 @@
 <h1>Edit <%= @contact.first_name %> <%= @contact.last_name %></h1>
 
 <form action="/contacts/ <%= @contact.id %>" method="post">
-	<input type="hidden" name="_method" value="put">
-	<input type="text" name="first_name" value="<%= @contact.first_name %>">
-	<input type="text" name="last_name" value="<%= @contact.last_name %>">
-	<input type="text" name="email" value="<%= @contact.email %>">
-	<input type="text" name="note" value="<%= @contact.note %>">
+	<p><input type="hidden" name="_method" value="put">
+	</p>
+	<p>First name: <input type="text" name="first_name" value="<%= @contact.first_name %>">
+	</p>
+	<p>Last name: <input type="text" name="last_name" value="<%= @contact.last_name %>">
+	</p>
+	<p>Email: <input type="text" name="email" value="<%= @contact.email %>">
+	</p>
+	<p>Notes: <input type="text" name="note" value="<%= @contact.note %>">
+	</p>
+	<p><input type="submit" name="Submit"></p>
 </form>
