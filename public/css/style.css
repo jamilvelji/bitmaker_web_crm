@@ -19,6 +19,10 @@ header li {
 	margin: 0;
 }
 
+header {
+	border-bottom: 1px solid #000;
+}
+
 .clearfix {
 	clear: both;
 }
@@ -31,5 +35,11 @@ section {
 section ul {
 	list-style-type: none;
 	padding: 0.5em 0;
+	margin: 0;
+}
+
+section li {
+	display: inline;
+	padding: 0 5px;
 	margin: 0;
 }
