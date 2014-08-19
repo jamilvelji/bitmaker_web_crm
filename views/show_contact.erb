@@ -1,10 +1,14 @@
-<% @@rolodex.contacts.each do |contact| %>
-
-<h1><%= contact.first_name %> <%= contact.last_name %> </h1>
+<h1><%= @contact.first_name %> <%= @contact.last_name %> </h1>
 <p><h3>Email:</h3> <%= @contact.email %></p>
 <p><h3>Note:</h3></p>
 <p><%= @contact.note %></p>
 
-<% end %>
 
-<a href="/contacts/<%= @contact.id %>/edit"><button type="button">Edit</button></a>
+<p>
+	<a href="/contacts/<%= @contact.id %>/edit"><button type="button">Edit</button></a>
+</p>
+
+<form action="/contacts/<%= @contact.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" name="Delete Contact">
+</form>

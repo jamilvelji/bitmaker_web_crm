@@ -4,7 +4,6 @@ require 'sinatra'
 
 # Initiates the rolodex class
 @@rolodex = Rolodex.new
-@@rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
 
 get '/' do
 	@crm_app_name = "My CRM"
@@ -56,4 +55,14 @@ put "/contacts/:id" do
 	else
 		raise Sinatra::NotFound
 	end
+end
+
+delete "/contacts/:id" do
+  @contact = @@rolodex.find(params[:id].to_i)
+  if @contact
+    @@rolodex.remove_contact(@contact)
+    redirect to("/contacts")
+  else
+    raise Sinatra::NotFound
+  end
 end
