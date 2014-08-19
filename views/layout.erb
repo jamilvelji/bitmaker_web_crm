@@ -4,8 +4,17 @@
 	<title><%= @crm_app_name %></title>
 </head>
 <body>
-
-<%= yield %>
-
+	<header>
+		<ul>
+			<li><a href="/">Main Menu</a></li>
+			<li><a href="/contacts">View Contacts</a></li>
+		</ul>
+	</header>
+	<section>
+		<%= yield %>	
+	</section>
+	<footer>
+		<small>Powered by AWESOME</small>
+	</footer>
 </body>
 </html>
