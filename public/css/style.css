@@ -1,0 +1,35 @@
+body {
+	font-family: sans-serif;
+}
+
+.logo {
+	float: left;
+	margin-top: 0.25em;
+}
+
+header ul {
+	list-style-type: none;
+	float: right;
+	margin-top: 0.25em;
+}
+
+header li {
+	display: inline;
+	padding: 0 5px;
+	margin: 0;
+}
+
+.clearfix {
+	clear: both;
+}
+
+section {
+	padding-top: 0.5em;
+	padding-bottom: 1.5em;
+}
+
+section ul {
+	list-style-type: none;
+	padding: 0.5em 0;
+	margin: 0;
+}

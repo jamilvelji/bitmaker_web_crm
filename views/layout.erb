@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 	<title><%= @crm_app_name %></title>
 </head>
 <body>
 	<header>
+		<h1 class="logo"><%= @crm_app_name %></h1>
 		<ul>
 			<li><a href="/">Main Menu</a></li>
 			<li><a href="/contacts">View Contacts</a></li>
 		</ul>
+		<div class="clearfix"></div>
 	</header>
 	<section>
 		<%= yield %>	
