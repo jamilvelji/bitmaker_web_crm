@@ -43,3 +43,7 @@ section li {
 	padding: 0 5px;
 	margin: 0;
 }
+
+section li button {
+	margin-left: 10px;
+}
