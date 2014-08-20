@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 	<title><%= @crm_app_name %></title>
 </head>
 <body>
-	<header>
-		<h1 class="logo"><%= @crm_app_name %></h1>
-		<ul>
-			<li><a href="/">Main Menu</a></li>
-			<li><a href="/contacts">View Contacts</a></li>
-		</ul>
-		<div class="clearfix"></div>
-	</header>
-	<section>
-		<%= yield %>	
-	</section>
-	<footer>
-		<small>Powered by AWESOME</small>
-	</footer>
+	<div class="container-fluid">
+		<header class="row">
+			<h1 class="logo pull-left"><%= @crm_app_name %></h1>
+			<ul class="pull-right">
+				<li><a href="/">Main Menu</a></li>
+				<li><a href="/contacts">View Contacts</a></li>
+			</ul>
+			<div class="clearfix"></div>
+		</header>
+		<section>
+			<%= yield %>	
+		</section>
+		<footer>
+			<small>Powered by AWESOME</small>
+		</footer>
+	</div>
+	<script src="/js/bootstrap.js"></script>
 </body>
 </html>

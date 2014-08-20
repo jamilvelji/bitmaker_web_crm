@@ -2,15 +2,21 @@ body {
 	font-family: sans-serif;
 }
 
+a {
+	text-decoration: none;
+}
+
 .logo {
 	float: left;
 	margin-top: 0.25em;
+	padding-left: 0.5em;
 }
 
 header ul {
 	list-style-type: none;
 	float: right;
-	margin-top: 0.25em;
+	padding-top: 1em;
+	padding-right: 0.5em;
 }
 
 header li {
@@ -50,3 +56,14 @@ section li button {
 section button {
 	margin-left: 10px;
 }
+
+.contact-display {
+	font-size: 1.25em;
+}
+
+.edit-button {
+	padding-top: 1em;
+}
+
+.delete-button {
+	padding-top: 1em;

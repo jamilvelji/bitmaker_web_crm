@@ -3,11 +3,11 @@
 <ul>
 	<% @@rolodex.contacts.each do |contact| %>
 
-	<li class="contact-display"><%= contact.first_name %> <%= contact.last_name %> <a href="/contacts/<%= contact.id %>"><button type="button">View</button></a> <a href="/contacts/<%= contact.id %>/edit"><button type="button">Edit</button></a></li>
+	<li class="contact-display"><%= contact.first_name %> <%= contact.last_name %> <a class="btn btn-default btn-xs" href="/contacts/<%= contact.id %>">View</a> <a class="btn btn-default btn-xs" href="/contacts/<%= contact.id %>/edit">Edit</a></li>
 
 	<% end %>
 </ul>
 
 <ul>
-	<li><a href="/contacts/new">Add Contact</a></li>
+	<li class="btn btn-default"><a href="/contacts/new">Add Contact</a></li>
 </ul>
