@@ -1,6 +1,6 @@
 <h1>Edit <%= @contact.first_name %> <%= @contact.last_name %></h1>
 
-<form action="/contacts/ <%= @contact.id %>" method="post">
+<form action="/contacts/<%= @contact.id %>" method="post">
 	<p><input type="hidden" name="_method" value="put">
 	</p>
 	<p>First name: <input type="text" name="first_name" value="<%= @contact.first_name %>">
