@@ -14,8 +14,9 @@
 	<a class="btn btn-default" href="/contacts/<%= @contact.id %>/edit">Edit</a>
 </p>
 
-<h4 class="delete-button">Delete contact?</h4>
-<form action="/contacts/<%= @contact.id %>" method="post">
-	<input type="hidden" name="_method" value="delete">
-	<input type="submit" name="Delete Contact">
-</form>
+<div class="delete-button">
+	<form action="/contacts/<%= @contact.id %>" method="post">
+		<input type="hidden" name="_method" value="delete">
+		<input type="submit" name="Delete Contact" value="Delete Contact">
+	</form>
+</div>
