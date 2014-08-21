@@ -21,7 +21,7 @@ DataMapper.auto_upgrade!
 @@rolodex = Rolodex.new
 
 get '/' do
-	@crm_app_name = "My CRM"
+	@crm_app_name = "Jamil's CRM"
 	erb :index
 end
 
@@ -45,12 +45,12 @@ post "/contacts" do
 end
 
 get "/contacts/:id" do
-	@contact = @Contact.get(params[:id].to_i)
-	if @contact
-		erb :show_contact
-	else
-		raise Sinatra::NotFound
-	end
+  @contact = Contact.get(params[:id].to_i)
+  if @contact
+    erb :show_contact
+  else
+    raise Sinatra::NotFound
+  end
 end
 
 get "/contacts/:id/edit" do
@@ -63,17 +63,18 @@ get "/contacts/:id/edit" do
 end
 
 put "/contacts/:id" do
-	@contact = @Contact.get(params[:id].to_i)
+  @contact = Contact.get(params[:id].to_i)
   if @contact
     @contact.first_name = params[:first_name]
     @contact.last_name = params[:last_name]
     @contact.email = params[:email]
     @contact.note = params[:note]
+    @contact.save
 
-		redirect to("/contacts")
-	else
-		raise Sinatra::NotFound
-	end
+    redirect to("/contacts")
+  else
+    raise Sinatra::NotFound
+  end
 end
 
 delete "/contacts/:id" do
