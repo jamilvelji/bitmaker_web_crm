@@ -2,7 +2,7 @@ body {
 	font-family: sans-serif;
 }
 
-a {
+a:hover {
 	text-decoration: none;
 }
 
@@ -27,10 +27,6 @@ header li {
 
 header {
 	border-bottom: 1px solid #000;
-}
-
-.clearfix {
-	clear: both;
 }
 
 section {
@@ -67,4 +63,11 @@ section button {
 
 .delete-button {
 	padding-top: 1em;
+}
+
+footer {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	width: 100%;
 }
